@@ -4,17 +4,42 @@
 Its restapi CRUD, The purpose of the application is to enable the user to send information about the company and its employees.
 
 
-## First step
-For the first step we need to migrate data to db:
+
+## Requirements
+PHP : 8.2 - 8.4
+
+MySQL server
+
+or if you want XAMPP/LAMPP
+
+## Installation
+For the first step we need to install composer
+```
+composer install
+```
+To execute migrate, we need to copy file
+.env.example to .env
+
+then migrate data to db:
+
 ```
 php artisan migrate
 ```
-This command will be created db for us.
+
+The last step before launch is to generate the application key
+```
+php artisan key:generate
+
+```
+
+We can now launch the finished project
 
 ```
 php artisan serve
 ```
 
+
+## Usage
 And we can tested this API with postman:
 ```
 https://www.postman.com/downloads/
@@ -58,4 +83,3 @@ Now we can tested all endpoints in this app :). Enjoy!
   POST            api/register
   GET|HEAD        api/user
 ```
-
